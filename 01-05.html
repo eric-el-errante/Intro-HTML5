@@ -1,0 +1,241 @@
+<!-- the document type is html -->
+<!DOCTYPE html>
+
+<!-- this is our head section that contains mostly metadata that will not be seen by the user. It will contain links to fonts, scripts, css styles, etc -->
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Learning HTML</title>
+    </head>
+
+    <body id="top">
+
+<!-- CLASS applies special properties to groups of elements -->
+<!-- ID specifies a unique id to one element -->
+<!-- ACCESSKEY allows shortcut key to activate an element -->
+<!-- TABINDEX specifies the order of elements when tabbing through a page. tabindex="1" is highest priority -->
+
+<!-- A <div> is a block-level element that is commonly used to identify large groupings of content, and which helps to build a web page's layout and design -->
+        <div class="social">
+            <p>I may be found on...</p>
+            <p>Additionally, I have a profile on...</p>
+        </div>
+
+<!-- A <span> is an inline-level element used to identify smaller groupings of text within a block-level element -->        
+        <p>Soon we will be <span class="tooltip">writing HTML</span> with the best of them.</p>
+
+<!-- Headings <h#> are block-level elements and used to break up content and hierarchy -->
+<!-- Paragraphs <p> are block-level elements and often follow headings as supporting information -->
+        <h1>Heading 1</h1>
+        <p>Supporting paragraph for Heading 1</p>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <p>Supporting paragraph for Heading 4</p>
+        <P>Second supporting paragraph for Heading 4</P>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+<!-- <strong> gives STRONG IMPORTANCE to text -->
+<!-- <b> is for being stylistically offset text -->
+        <p><strong>Caution: </strong>Falling rocks. This gives emphasis/importance to the word caution.</p>
+        <p>This recipe calls for <b>bacon</b> and <b>baconnaise</b>. These words are stylistically offset.</p>
+
+<!-- <em> gives EMPHASIS to text -->
+<!-- <i> conveys an alternate voice/tone -->
+        <p>I <em>love</em> Albuquerque! The word love is given emphasis.</p>
+        <p>The name <i>Shay</i> means a gift. The name "Shay" acts as if placed in quotation marks.</p>
+
+<!-- <header> is different from <head>. It is used at the top of a page, generally for navigation, intro text, etc. -->
+<!-- <nav> identifies section of major navigational links. It should be used for PRIMARY, GLOBAL navigation links like inside the header -->
+<!-- <article> is used for self-contained, independent text that can be understood and transferrred without confusion and loss of meaning -->
+<!-- <section> is used to group content as related, it often includes a heading -->
+
+<!-- <div> is used to group content for styling purposes, whereas <section> and <article> contribute to structure and outline of a document-->
+
+<!-- <aside> holds content that is tangentially related to nearby content -->
+<!-- <footer> is the end of page, at the bottom, and will have relavent content -->
+
+<!-- <a> is an anchor used for hyperlinks. It must contain a 'href' (hyperlink reference) attribute -->
+        <p><a href="http://www.google.com">http://www.google.com</a>: This is an <em>absolute</em> path because it links OUTSIDE the current website.</p>
+        <p><a href="about.html">about.html</a>: This is a <em>relative</em> path because it links WITHIN the current website.</p>
+
+<!-- You can also use mailto: to hyperlink to email include the subject= and body= to autopopulate when the link is clicked.  Note: use ? after email addres, and & to separate subject/body. Use %20 for spaces-->
+        <p><a href="mailto:eric.meyr@gmail.com">eric.meyr@gmail.com</a>: Clicking this link will open to send an email.</p>
+        <p><a href="mailto:eric.meyr@gmail.com?subject=Hello%20there&body=Hey">mailto:eric.meyr@gmail.com?subject=Hello%20there&body=Hey</a>: This will email and autofill with a subject of <i>Hello there</i> and a body of <i>Hey</i>.</p>
+
+<!-- to choose how a link will open use target= -->
+        <p><a href="http://www.google.com" target="_blank">http://www.google.com</a>: Opens in a new window/tab because it has target set to <i>_blank</i>.</p>
+
+<!-- you can link within a page by linking to the id of another section of the page -->
+        <p><a href="#top">Back to top</a>: This will link to the top of the page because the body tag has <i>id="top"</i> and our href link is <i>#top</i>.</p>
+
+        <br>
+
+<!-- Unordered lists <ul> each have a <li> list item and will NOT be numbered -->
+        Unordered List<ul>
+            <li>alexis</li>
+            <li>ryker</li>
+            <li>indie</li>
+        </ul>
+
+<!-- Ordered lists <ol> each have a <li> list item and WILL autopopulate with numbers -->
+        Ordered List<ol>
+            <li>alexis</li>
+            <li>ryker</li>
+            <li>indie</li>
+        </ol>
+
+<!-- you can use start="#" to start at any number -->
+        Ordered List starting at 12 because in the <i>ol</i> tag we have <i>start="12"</i><ol start="12">
+            <li>Alexis</li>
+            <li>Ryker</li>
+            <li>Indie</li>
+        </ol>
+
+<!-- you can use reversed in the ol tag to reverse the order of numbers. reversed is a boolean value is is normally false, unless it says reversed in which case it is true -->
+        Ordered List in reverse because the <i>ol</i> tag has <i>reversed</i><ol reversed>
+            <li>Alexis</li>
+            <li>Ryker</li>
+            <li>Indie</li>
+        </ol>
+
+<!-- the value attribute can change the numbers as needed -->
+        Ordered list with values changed in mid list because the second <i>li</i> tag has <i>value="7"</i><ol>
+            <li>Alexis</li>
+            <li value="7">Ryker</li>
+            <li>Indie</li>
+        </ol>
+
+<!-- description list <dl> is generally used for multiple terms and descriptions, like a glossary for example.
+     it requires a description term element <dt> and the description element <dd> -->
+        Description List<dl>
+            <dt>Alexis</dt>
+            <dd>Alexis is my wife!</dd>
+            <dt>Ryker</dt>
+            <dd>Ryker was Alexis' first dog!</dd>
+            <dt>Indie</dt>
+            <dd>Indie was our first dog together!</dd>
+        </dl>
+
+<!-- list can also be nested to make lists within list as needed-->
+        Nested List<ul>
+            <li>Eat breakfast</li>
+            <li>Take medication</li>
+            <li>Deal with the shit:
+                <ol>
+                    <li>Empty wheelbarrow</li>
+                    <li>Load shit bags</li>
+                    <li>find shit spot</li>
+                    <li>dig shit hole</li>
+                    <li>empty shit</li>
+                    <li>cover!</li>
+                </ol>
+            </li>
+            <li>attach shed door</li>
+            <li>move couch</li>
+        </ul>
+
+<!-- the <img> tag is a nonwrappable tag for adding images. it has attributes of
+    src="" for the link to the image. it can be absolute or relative
+    alt="" to help search engines and assist technologies (alternative text). it will also display the alttext if the link is broken
+    title="" displays on hovering mouse over the picture
+    class="" extra formatting for use by css, height, width, positioning
+    ***JPG is normally used for photographs and png is normally used for icons -->
+        <p>
+            <img src="images/handdrawn-usa.jpg" alt="hand drawn black and white geographical map of the usa" title="USA Sketch" class="regular">
+        </p>
+
+        <br>
+
+<!-- <table> creates data in columns/rows. table row <tr> and table data <td> are required elements. 
+    other elements include table header <th> for each column header, table caption <caption> for a title of the table 
+    table head <thead> for the headings, table body <tbody> for the data, table footer <tfoot> for endinds of things-->
+        <p>This table has a title, column headings in bold, players as the body, and the averages as the footer</p>
+            <table>
+                <caption>Chelsea Central Defender Stats: FM2021</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Age</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>de Ligt, Matthias</td>
+                        <td>D C, DM</td>
+                        <td>22</td>
+                        <td>89.7</td>
+                    </tr>
+                    <tr>
+                        <td>Kounde, Jules</td>
+                        <td>D C, DM</td>
+                        <td>23</td>
+                        <td>84.3</td>
+                    </tr>
+                    <tr>
+                        <td>Zouma, Kurt</td>
+                        <td>D RC</td>
+                        <td>27</td>
+                        <td>82.7</td>
+                    </tr>
+                    <tr>
+                        <td>Ampadu, Ethan</td>
+                        <td>D C, DM</td>
+                        <td>21</td>                    
+                        <td>78.9</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Average:</td>
+                        <td></td>
+                        <td>23.25</td>
+                        <td>83.9</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <br>
+
+<!-- some special entities or characters need to be specially formatted to work -->
+            <table>
+                <caption>Special Entities</caption>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Type this</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;</td>
+                        <td><i>&</i>lt;</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td><i>&</i>gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&copy;</td>
+                        <td><i>&</i>copy;</td>
+                    </tr>
+                    <tr>
+                        <td>"space"</td>
+                        <td><i>&</i>nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&cent;</td>
+                        <td><i>&</i>cent;</td>
+                    </tr>
+                    <tr>
+                        <td>&amp;</td>
+                        <td><i>&</i>amp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    </body>
+</html>
