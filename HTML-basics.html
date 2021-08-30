@@ -6,6 +6,10 @@
     <head>
         <meta charset = "UTF-8">
         <title>Learning HTML</title>
+<!-- adding an image which will go in the tab next to the title of the page (favicon) -->
+        <link rel="icon" type="image/png" href="https://i.ibb.co/fG9FBHb/eee.png">
+<!-- link to Font Awesome Content Delivery Network (free icons). These are then used with the <i> tag -->
+        <script src="https://kit.fontawesome.com/678e27587e.js" crossorigin="anonymous"></script>
     </head>
 
     <body id="top">
@@ -237,5 +241,57 @@
                 </tbody>
             </table>
 
-    </body>
+<!-- image <img> tag (jpeg, gif, png, svg, bmp), all images are downloaded so keep an eye on size (width/height attribute) 
+     if you only specify width, it will automatically adjust height to keep the ratio
+     always use an alt: works for search engines, screen readers, and displays info if image link is broken -->
+            <figure>
+                <img src="images/DSC04276.JPG" width="1000px" alt="4th of July streamers">
+                <figcaption>Set image size using width (keeps aspect ratio)</figcaption>
+            </figure>
+            <figure>
+                <img src="images/DSC04276.JPG" width="1000px" height="100px" alt="4th of July streamers">
+                <figcaption>Set image size using width and height (changes aspect ratio)</figcaption>
+            </figure>
+            <figure>
+                <img src="images/DSC04276.JPG" width="50%" alt="4th of July streamers">
+                <figcaption>Set image size using % (keeps aspect ratio)</figcaption>
+            </figure>
+
+<!-- fontawesome icons. can copy code directly from fontawesome.com -->
+            <i class="fas fa-atom"></i>
+            <i class="fas fa-atom fa-xs"></i>
+            <i class="fas fa-atom fa-md"></i>
+            <i class="fas fa-atom fa-lg"></i>
+            <i class="fas fa-atom fa-2x"></i>
+            <i class="fas fa-atom fa-5x"></i>
+            <i class="fas fa-atom fa-10x"></i>
+
+            <br>
+<!-- fontawesome with links. the aria-label attribute gives screen readers the info -->
+            <a href="http://www.soccernet.com" aria-label="Soccernet"><i class="fas fa-futbol fa-5x"></i></a>
+            <br>
+
+<!-- absolute reference -->
+            <a href="http://www.soccernet.com">Soccernet</a>
+            <br>
+<!-- relative reference (used for within your own site) -->
+            <a href="index.html">Index Page</a>
+            <br>
+<!-- using an image as the clickable link -->
+            <a href="http://www.soccernet.com"><img src="images/cc02.jpg" alt="atom trails"></a>
+            <br>
+<!-- the target attribute defines whether it opens in same window, or new window/tab -->
+            <a href="http://www.soccernet.com" target="_self">_self target: Soccernet opens in same tab</a>
+            <br>
+            <a href="http://www.soccernet.com" target="_blank">_blank target: Soccernet opens in new tab</a>
+            <br>
+
+<!-- adding multimedia audio and video 
+     attributes: autoplay, controls, loop, buffered, muted, volume, height, width -->
+            <video src="https://youtu.be/mQKvyNUaQeg" width="400" controls>video link that will not play</video>
+            <br>
+            <audio src="https://upload.wikimedia.org/wikipedia/commons/0/04/Pyotr_Ilyich_Tchaikovsky_1812_overture.ogg" controls>Pytor Ilyhic Tchnaikofvys 1812 ovrture</audio>
+            <br>
+            
+        </body>
 </html>
